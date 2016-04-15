@@ -4,7 +4,7 @@
 This sample project uses PHP and MySQL database. 
 
 ###Examples
-- [Demo Page](https://jplist.com/datasourcesexamples/php-mysql-json-handlebars-demo)
+- [Demo Page](http://jplist.com/datasourcesexamples/php-mysql-json-handlebars-demo)
 
 ###Common Features
 - Works with any content (tables, lists, div elements etc...)
