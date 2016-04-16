@@ -3,10 +3,10 @@
 **jPList** is a flexible jQuery plugin for sorting, pagination and filtering of any HTML structure (DIVs, UL/LI, tables, etc).
 This sample project uses PHP and MySQL database. 
 
-###Examples
+##Examples
 - [Demo Page](http://jplist.com/datasourcesexamples/php-mysql-json-handlebars-demo)
 
-###Common Features
+##Common Features
 - Works with any content (tables, lists, div elements etc...)
 - Works with JavaScript templates like Handlebars, Mustache etc.
 - Works with XML and XSLT templates
@@ -36,17 +36,17 @@ This sample project uses PHP and MySQL database.
 - Reset button Control
 - Back button Control
 
-###System requirements
+##System requirements
 - PHP version 5.4.4 or greater
 
-###Browser Compatibility
+##Browser Compatibility
 - Internet Explorer 8+
 - Firefox
 - Chrome
 - Safari
 - Opera
 
-###jQuery Compatibility
+##jQuery Compatibility
 - Works with jQuery from [version 1.7](http://code.jquery.com/jquery-1.7.min.js)
 - Works with jQuery 2.x versions
 
