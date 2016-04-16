@@ -11,12 +11,12 @@ define('DB_NAME', 'jplist');
 define('DB_USER', 'root');
 
 //MySQL database password
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '');
 
 //MySQL hostname
 define('DB_HOST', '127.0.0.1');
 
 //MySQL hostname
-define('DB_TABLE', 'item');
+define('DB_TABLE', 'Item');
 
 ?>

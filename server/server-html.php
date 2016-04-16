@@ -71,7 +71,7 @@
 			$html = "";
 			
 			try{
-				parent::__construct();
+                parent::__construct();
 				
 				if(isset($this->statuses)){
 					

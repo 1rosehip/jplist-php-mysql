@@ -1,14 +1,15 @@
+USE jplist;
 
-CREATE TABLE [jplist].[Item](
-	[ID] [int] IDENTITY(1,1) NOT NULL,
-	[Title] [nvarchar](150) NULL,
-	[Image] [nvarchar](150) NULL,
-	[Description] [nvarchar](MAX) NULL,
-	[Likes] [int] NULL,
-	[Keyword1] [nvarchar](150) NULL,
-	[Keyword2] [nvarchar](150) NULL
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];
-
+CREATE TABLE Item(
+	ID int NOT NULL AUTO_INCREMENT,
+	Title nvarchar(150) NULL,
+	Image nvarchar(150) NULL,
+	Description nvarchar(1500) NULL,
+	Likes int NULL,
+	Keyword1 nvarchar(150) NULL,
+	Keyword2 nvarchar(150) NULL,
+	PRIMARY KEY(ID)
+);
 
 INSERT INTO Item (Title, Image, Description, Likes, Keyword1, keyword2) VALUES
 	('Architecture', '../../img/thumbs/arch-2.jpg', 'Architecture is both the process and product of planning, designing and construction. Architectural works, in the material form of buildings, are often perceived as cultural symbols and as works of art. Historical civilizations are often identified with their surviving architectural achievements.', 25, 'Architecture', 'Brown');
