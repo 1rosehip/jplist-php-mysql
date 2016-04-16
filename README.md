@@ -36,6 +36,9 @@ This sample project uses PHP and MySQL database.
 - Reset button Control
 - Back button Control
 
+###System requirements
+- PHP version 5.4.4 or greater
+
 ###Browser Compatibility
 - Internet Explorer 8+
 - Firefox
