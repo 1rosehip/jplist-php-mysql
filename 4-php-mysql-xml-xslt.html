@@ -6,62 +6,90 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	    <!-- font libs -->
-		<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+		<link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
 		
 		<!-- demo page styles -->
-		<link href="css/jplist.demo-pages.min.css" rel="stylesheet" type="text/css" />	
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.demo-pages.min.css" rel="stylesheet" type="text/css" />	
 		
 		<!-- jQuery lib -->		
-        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		
 		<!-- jPList core js and css  -->
-		<link href="css/jplist.core.min.css" rel="stylesheet" type="text/css" />		
-		<script src="js/jplist.core.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.core.min.css" rel="stylesheet" type="text/css" />		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.core.min.js"></script>
 				
 		<!-- sort bundle -->
-		<script src="js/jplist.sort-bundle.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.sort-bundle.min.js"></script>
 		
 		<!-- textbox filter control -->
-		<script src="js/jplist.textbox-filter.min.js"></script>
-		<link href="css/jplist.textbox-filter.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.textbox-filter.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.textbox-filter.min.css" rel="stylesheet" type="text/css" />
 		
 		<!-- jplist pagination bundle -->
-		<script src="js/jplist.pagination-bundle.min.js"></script>
-		<link href="css/jplist.pagination-bundle.min.css" rel="stylesheet" type="text/css" />		
-		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.pagination-bundle.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.pagination-bundle.min.css" rel="stylesheet" type="text/css" />	
 		<!-- jplist history bundle -->
-		<script src="js/jplist.history-bundle.min.js"></script>
-		<link href="css/jplist.history-bundle.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.history-bundle.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.history-bundle.min.css" rel="stylesheet" type="text/css" />
 		
 		<!-- jplist toggle bundle -->
-		<script src="js/jplist.filter-toggle-bundle.min.js"></script>
-		<link href="css/jplist.filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.filter-toggle-bundle.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
 		
 		<!-- jplist views control -->
-		<script src="js/jplist.views-control.min.js"></script>
-		<link href="css/jplist.views-control.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.list-grid-view.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.list-grid-view.min.css" rel="stylesheet" type="text/css" />
+			
+		<!-- filter dropdown control -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.filter-dropdown-bundle.min.js"></script>
 		
 		<!-- preloader -->
-		<script src="js/jplist.preloader-control.min.js"></script>
-		<link href="css/jplist.preloader-control.min.css" rel="stylesheet" type="text/css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.preloader-control.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.preloader-control.min.css" rel="stylesheet" type="text/css" />
 		
-		<!-- filter dropdown control -->
-		<script src="js/jplist.filter-dropdown-bundle.min.js"></script>
-		
+        <!-- xslt template -->
+        <script id="xslt-template" type="text/xslt-template">
+        <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+            <xsl:output method="html" indent="yes" encoding="utf-8" omit-xml-declaration="no"/>
+            <xsl:template match="/">
+
+                <xsl:for-each select="//item">
+
+                    <div class="list-item box">	
+
+                        <div class="img left">
+                            <img src="{image}" alt="" title=""/>
+                        </div>
+
+                        <div class="block right">
+                            <p class="title"><xsl:value-of select="title"/></p>
+                            <p class="desc"><xsl:value-of select="description"/></p>
+                            <p class="like"><xsl:value-of select="likes"/> Likes</p>
+                            <p class="theme"><xsl:value-of select="keyword1"/>, <xsl:value-of select="keyword2"/></p>
+                        </div>
+                    </div>
+                </xsl:for-each>
+
+            </xsl:template>
+        </xsl:stylesheet>					
+        </script>
+
+        
 		<script>
 		$('document').ready(function () {
 
 			var $list = $('#demo .list')
-					, template = $('#xslt-template').html();
+					, template = $.trim($('#xslt-template').html());
 
 			$('#demo').jplist({
 
-				itemsBox: '.list'
+				    itemsBox: '.list'
 					, itemPath: '.list-item'
 					, panelPath: '.jplist-panel'
-
-				//data source
+                    //, debug: true
+                
+				    //data source
 					, dataSource: {
 
 						type: 'server'
@@ -75,23 +103,26 @@
 							}
 						}
 
-						//render with handlebars
+						//render with xslt
 						, render: function (dataItem) {
-
+                            
 							var xsltProcessor
 								, srcTree
-								, xsltTree;
+								, xsltTree
+                                , templateXml;
 
 							if (document.implementation && document.implementation.createDocument && window.XSLTProcessor) {
-
+                                
 								if (dataItem.content) {
 									xsltProcessor = new XSLTProcessor();
-									xsltProcessor.importStylesheet($.parseXML(template));
+                                    templateXml = $.parseXML(template);
+									xsltProcessor.importStylesheet(templateXml);
 									$list.html(xsltProcessor.transformToFragment(dataItem.content, document));
 								}
 							}
 							else {//IE ...
 								if (dataItem.responseText) {
+                                    
 									//xml
 									srcTree = new ActiveXObject('Msxml2.DOMDocument.6.0');
 									srcTree.async = false;
@@ -113,32 +144,6 @@
 		});
 		</script>
 		
-		<!-- xslt template -->
-		<script id="xslt-template" type="text/xslt-template">
-		<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-			<xsl:output method="html" indent="yes" encoding="utf-8" omit-xml-declaration="no"/>
-			<xsl:template match="/">
-					
-				<xsl:for-each select="//item">
-					
-					<div class="list-item box">	
-					
-						<div class="img left">
-							<img src="{image}" alt="" title=""/>
-						</div>
-						
-						<div class="block right">
-							<p class="title"><xsl:value-of select="title"/></p>
-							<p class="desc"><xsl:value-of select="description"/></p>
-							<p class="like"><xsl:value-of select="likes"/> Likes</p>
-							<p class="theme"><xsl:value-of select="keyword1"/>, <xsl:value-of select="keyword2"/></p>
-						</div>
-					</div>
-				</xsl:for-each>
-						
-			</xsl:template>
-		</xsl:stylesheet>					
-		</script>
 		
     </head>
     <body>
@@ -151,7 +156,7 @@
 					<!-- left menu -->
 					<ul id="black-top-bar-left-menu" class="hmenu left iphone-hidden">
 						<li class="glow">
-							<a title="" href="https://github.com/no81no/jplist/issues?state=open">
+							<a title="" href="//github.com/no81no/jplist/issues?state=open">
 								<i class="fa fa-asterisk"></i> Request a feature / <i class="fa fa-bug"></i> Report a bug
 							</a>
 						</li>
@@ -159,10 +164,10 @@
 
 					<!-- social menu -->
 					<ul id="social-menu" class="hmenu right">
-						<li class="glow"><a title="" href="https://www.facebook.com/jplist"><i class="fa fa-facebook"></i>&nbsp;</a></li>
-						<li class="glow"><a rel="publisher" title="" href="https://plus.google.com/+Jplistjs"><i class="fa fa-google-plus"></i></a></li>	
-						<li class="glow"><a title="" href="https://twitter.com/jquery_jplist"><i class="fa fa-twitter"></i></a></li>					
-						<li class="glow"><a title="" href="https://github.com/no81no/jplist"><i class="fa fa-github"></i></a></li>
+						<li class="glow"><a title="" href="//www.facebook.com/jplist"><i class="fa fa-facebook"></i>&nbsp;</a></li>
+						<li class="glow"><a rel="publisher" title="" href="//plus.google.com/+Jplistjs"><i class="fa fa-google-plus"></i></a></li>	
+						<li class="glow"><a title="" href="//twitter.com/jquery_jplist"><i class="fa fa-twitter"></i></a></li>					
+						<li class="glow"><a title="" href="//github.com/no81no/jplist"><i class="fa fa-github"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -177,8 +182,8 @@
 						<!-- logo -->
 						<div class="align-center text-shadow" id="logo">	
 							<p>
-								<img title="jPList - jQuery Data Grid Controls" alt="jPList - jQuery Data Grid Controls" src="http://jplist.com/content/img/common/rocket.png" />
-								<a title="" href="http://jplist.com">jPList - jQuery Data Grid Controls</a>
+								<img title="jPList - jQuery Data Grid Controls" alt="jPList - jQuery Data Grid Controls" src="//jplist.com/content/img/common/rocket.png" />
+								<a title="" href="//jplist.com">jPList - jQuery Data Grid Controls</a>
 							</p>
 							<h1 class="h1-30-normal">PHP and MySQL Demo with XML Format and XSLT Template</h1>
 						</div>
@@ -402,8 +407,8 @@
 				data-control-action="views"
 				data-default="jplist-list-view">
 								   
-				<button type="button" class="jplist-view jplist-list-view" data-type="jplist-list-view"></button>
-				<button type="button" class="jplist-view jplist-grid-view" data-type="jplist-grid-view"></button>
+				<button type="button" class="jplist-view jplist-list-view" data-type="jplist-list-view"><i class="fa fa-list"></i></button>
+				<button type="button" class="jplist-view jplist-grid-view" data-type="jplist-grid-view"><i class="fa fa-th-large"></i></button>
 			</div>
 								
 			<!-- pagination results -->
@@ -512,7 +517,7 @@
 			<div class="center">			
                 <div class="box">
 					<p id="footer-content" class="align-center glow">
-						<a href="http://jplist.com" title="">Copyright &copy; 2015  <b>jPList Software</b></a>
+						<a href="//jplist.com" title="">Copyright &copy; 2015  <b>jPList Software</b></a>
 					</p>					
 				</div>
 			</div>

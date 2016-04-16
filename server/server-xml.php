@@ -51,7 +51,7 @@
 		*/
 		function getWrapper($itemsXML){
 			
-			$xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+			$xml = "";
 			
 			$xml .= "<root count=\"" . $this->pagination->numberOfPages . "\">";
 			$xml .= $itemsXML;
@@ -81,13 +81,14 @@
 						}
 					}
 				}
+                
+                ob_clean();
 
 				//set xml header
-				header('Content-type: application/xml');
+				//header('Content-type: application/xml');
 
 				//print xml
-				ob_clean();
-				echo(trim($this->getWrapper($xml)));		
+				echo(trim($this->getWrapper($xml)));
 				
 				//close the database connection
 				$this->db = NULL;
