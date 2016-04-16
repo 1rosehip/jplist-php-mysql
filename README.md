@@ -4,7 +4,10 @@
 This sample project uses PHP and MySQL database. 
 
 ##Examples
-- [Demo Page](http://jplist.com/datasourcesexamples/php-mysql-json-handlebars-demo)
+- [PHP, MySQL and HTML](http://jplist.com/datasourcesexamples/php-mysql-json-handlebars-demo)
+- [PHP, MySQL, JSON and Handlebars](http://jplist.com/datasourcesexamples/php-mysql-json-handlebars-demo)
+- [PHP, MySQL, JSON and Mustache](http://jplist.com/datasourcesexamples/php-mysql-json-mustache-demo)
+- [PHP, MySQL, XML and XSLT](http://jplist.com/datasourcesexamples/php-mysql-xml-xslt-demo)
 
 ##Common Features
 - Works with any content (tables, lists, div elements etc...)
