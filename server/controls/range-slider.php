@@ -2,8 +2,8 @@
 
     /**
     * get partial model
-    * @param {string} query
-    * @param {number} param
+    * @param {string} $query
+    * @param {number} $param
     */
     function getPartialModel($query, $param){
         
@@ -16,7 +16,7 @@
     }
 
 	/**
-	* get textbox control query
+	* get jQuery UI range slider control query
 	* @param {Object} $status
 	* @return {Object}
 	* status example

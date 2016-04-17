@@ -20,6 +20,7 @@
 	require "controls/filterdropdown.php";
 	require "controls/filterselect.php";
     require "controls/range-slider.php";	
+    require "controls/range-filter.php";
 		
 	class jPListHTML extends jPListServer{
 			
