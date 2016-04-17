@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+    <head>		
+		<title>Counter Control Demo | jPList - jQuery Data Grid Controls</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	    <!-- font libs -->
+		<link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+		
+		<!-- demo page styles -->
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.demo-pages.min.css" rel="stylesheet" type="text/css" />	
+		
+		<!-- jQuery lib -->		
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		
+		<!-- jPList core js and css  -->
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.core.min.css" rel="stylesheet" type="text/css" />		
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.core.min.js"></script>
+					
+		<!-- jplist toggle bundle -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.filter-toggle-bundle.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Counter Control -->			
+        <!--
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.counter-control.min.js"></script>-->
+        <script src="counter-view.js"></script>
+		
+        <!-- preloader -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/js/jplist.preloader-control.min.js"></script>
+		<link href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.2.0/css/jplist.preloader-control.min.css" rel="stylesheet" type="text/css" />
+		
+		<script>
+		$('document').ready(function () {
+			$('#demo').jplist({
+
+				itemsBox: '.list'
+				, itemPath: '.list-item'
+				, panelPath: '.jplist-panel'
+
+				//data source
+				, dataSource: {
+
+					type: 'server'
+					, server: {
+
+						//ajax settings
+						ajax: {
+							url: 'server/server-html.php'
+							, dataType: 'html'
+							, type: 'POST'
+						}
+					}
+				}
+
+			});
+		});
+		</script>
+		
+    </head>
+    <body>
+	
+		<!-- top bar -->
+		<div id="black-top-bar" class="box">
+			<div class="center">			
+				<div class="box">
+
+					<!-- left menu -->
+					<ul id="black-top-bar-left-menu" class="hmenu left iphone-hidden">
+						<li class="glow">
+							<a title="" href="//github.com/no81no/jplist/issues?state=open">
+								<i class="fa fa-asterisk"></i> Request a feature / <i class="fa fa-bug"></i> Report a bug
+							</a>
+						</li>
+					</ul>
+
+					<!-- social menu -->
+					<ul id="social-menu" class="hmenu right">
+						<li class="glow"><a title="" href="//www.facebook.com/jplist"><i class="fa fa-facebook"></i>&nbsp;</a></li>
+						<li class="glow"><a rel="publisher" title="" href="//plus.google.com/+Jplistjs"><i class="fa fa-google-plus"></i></a></li>	
+						<li class="glow"><a title="" href="//twitter.com/jquery_jplist"><i class="fa fa-twitter"></i></a></li>					
+						<li class="glow"><a title="" href="//github.com/no81no/jplist"><i class="fa fa-github"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+				
+		<!-- header -->
+		<header id="header" class="box">
+			<div id="header-box" class="box">
+				<div class="center">			
+					<div class="box">
+
+						<!-- logo -->
+						<div class="align-center text-shadow" id="logo">	
+							<p>
+								<img title="jPList - jQuery Data Grid Controls" alt="jPList - jQuery Data Grid Controls" src="//jplist.com/content/img/common/rocket.png" />
+								<a title="" href="//jplist.com">jPList - jQuery Data Grid Controls</a>
+							</p>
+							<h1 class="h1-30-normal">Counter Control Demo</h1>
+						</div>
+
+					</div>
+				</div>					
+			</div>
+		</header>
+		
+		<!-- main content -->
+		<div class="box">
+			<div class="center">
+				<!--<><><><><><><><><><><><><><><><><><><><><><><><><><> DEMO START <><><><><><><><><><><><><><><><><><><><><><><><><><>-->
+						
+				<div id="demo" class="box jplist">
+									
+					<!-- ios button: show/hide panel -->
+					<div class="jplist-ios-button">
+						<i class="fa fa-sort"></i>
+						jPList Actions
+					</div>
+										
+					<!-- panel -->
+					<div class="jplist-panel box panel-top">						
+				
+						<!-- checkbox filters -->
+						<div
+							class="jplist-group"
+							data-control-type="checkbox-group-filter"
+							data-control-action="filter"
+							data-control-name="themes">
+
+							<input
+								data-path=".architecture"
+								id="architecture"
+								type="checkbox"
+							/>
+
+							<label for="architecture">Architecture</label>
+
+							<input
+								data-path=".christmas"
+								id="christmas"
+								type="checkbox"
+							/>
+
+							<label for="christmas">Christmas</label>
+
+							<input
+								data-path=".nature"
+								id="nature"
+								type="checkbox"
+							/>
+
+							<label for="nature">Nature</label>
+
+							<input
+								data-path=".lifestyle"
+								id="lifestyle"
+								type="checkbox"
+							/>
+
+							<label for="lifestyle">Lifestyle</label>
+						</div>
+
+						<div
+							class="jplist-group"
+							data-control-type="checkbox-group-filter"
+							data-control-action="filter"
+							data-control-name="colors">
+
+							<input
+								data-path=".red"
+								id="red-color"
+								type="checkbox"
+							/>
+
+							<label for="red-color">Red</label>
+
+							<input
+								data-path=".green"
+								id="green-color"
+								type="checkbox"
+							/>
+
+							<label for="green-color">Green</label>
+
+							<input
+								data-path=".blue"
+								id="blue-color"
+								type="checkbox"
+							/>
+
+							<label for="blue-color">Blue</label>
+
+							<input
+								data-path=".brown"
+								id="brown-color"
+								type="checkbox"
+							/>
+
+							<label for="brown-color">Brown</label>
+												
+						</div>
+                        
+                        <!-- Counter controls -->
+                        <div class="jplist-group">
+                              <span>Architecture:</span>
+                              <span
+                                 data-control-type="counter"
+                                 data-control-action="counter"
+                                 data-control-name="architecture-counter"
+                                 data-format="{count}"
+                                 data-path=".architecture"
+                                 data-mode="filter"
+                                 data-type="path"></span>
+                        </div>
+						
+						<!-- preloader for data sources -->
+						<div 
+							class="jplist-hide-preloader jplist-preloader"
+							data-control-type="preloader" 
+							data-control-name="preloader" 
+							data-control-action="preloader">
+							<img src="img/common/ajax-loader-line.gif" alt="Loading..." title="Loading..." />
+						</div>
+
+					</div>
+										 
+					<!-- ajax content here -->   
+					<div class="list box text-shadow"></div>
+										
+					<!-- no result found -->
+					<div class="box jplist-no-results text-shadow align-center jplist-hidden">
+						<p>No results found</p>
+					</div>
+					
+				</div>
+
+				<!--<><><><><><><><><><><><><><><><><><><><><><><><><><> DEMO END <><><><><><><><><><><><><><><><><><><><><><><><><><>-->				
+			</div>		
+		</div>	
+		
+		<!-- footer -->
+		<footer class="box" id="footer">
+			<div class="center">			
+                <div class="box">
+					<p id="footer-content" class="align-center glow">
+						<a href="//jplist.com" title="">Copyright &copy; <script>document.write(new Date().getFullYear())</script> <b>jPList Software</b></a>
+					</p>					
+				</div>
+			</div>
+		</footer>	
+    </body>
+</html>
