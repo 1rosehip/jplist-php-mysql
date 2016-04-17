@@ -19,6 +19,7 @@
 	require "controls/checkboxgroupfilter.php";
 	require "controls/filterdropdown.php";
 	require "controls/filterselect.php";
+    require "controls/range-slider.php";	
 		
 	class jPListHTML extends jPListServer{
 			
@@ -40,6 +41,7 @@
 			$html .= "		<p class='title'>" . $item['title'] . "</p>";
 			$html .= "		<p class='desc'>" . $item['description'] . "</p>";
 			$html .= "		<p class='like'>" . $item['likes'] . " Likes</p>";
+            $html .= "		<p class='views'>" . $item['viewsnumber'] . " Views</p>";
 			$html .= "		<p class='theme'>" . $item['keyword1'] . ", " . $item['keyword2'] . "</p>";
 			$html .= "	</div>";
 			$html .= "</div>";
@@ -82,7 +84,9 @@
 							$html .= $this->getHTML($item);					
 						}
 					}
-								
+						
+                    ob_clean();
+                    
 					//print html
 					echo($this->getHTMLWrapper($html));
 				}

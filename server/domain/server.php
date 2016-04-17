@@ -35,12 +35,12 @@
 			$items = null;
 			
 			//init qury
-			$query = "SELECT title, description, image, likes, keyword1, keyword2 FROM " . DB_TABLE . " ";
+			$query = "SELECT title, description, image, likes, viewsnumber, keyword1, keyword2 FROM " . DB_TABLE . " ";
 
 			if($this->filter->filterQuery){				
 				$query .= " " . $this->filter->filterQuery . " ";
 			}
-				
+            
 			//get queries / fields				
 			if($this->sorting->sortQuery){
 				$query .= " " . $this->sorting->sortQuery . " ";
@@ -50,7 +50,8 @@
 				$query .= " " . $this->pagination->paginationQuery . " ";
 			}
 			
-			if(count($this->filter->preparedParams) > 0){					
+			if(count($this->filter->preparedParams) > 0){	
+                
 				$stmt = $this->db->prepare($query);
 				$stmt->execute($this->filter->preparedParams);
 				$items = $stmt->fetchAll();
