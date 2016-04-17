@@ -2,3 +2,4 @@ node_modules
 .DS_Store
 local-access_log
 local-error_log
+npm-debug.log
