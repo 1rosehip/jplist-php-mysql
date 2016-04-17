@@ -72,7 +72,8 @@
 					}
 					$json .= "]";					
 					
-							
+				    ob_clean();
+                    
 					//print json
 					echo($this->getWrapper($json));					
 				}	
