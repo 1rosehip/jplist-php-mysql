@@ -1,5 +1,7 @@
 # ![jPList - jQuery Data Grid Controls - PHP / MySQL Version](http://jplist.com/content/img/common/rocket-50.png) [jPList - jQuery Data Grid Controls - PHP / MySQL Version](http://jplist.com)
 
+##This repository was merged with the main jPList repo located [here](https://github.com/no81no/jplist). Please open new tickets in the main repository.##
+
 **jPList** is a flexible jQuery plugin for sorting, pagination and filtering of any HTML structure (DIVs, UL/LI, tables, etc). This project is a port of [jQuery jPList Plugin](https://github.com/no81no/jplist) to PHP + MySQL database. Visit project home for more details: [jplist.com](http://jplist.com).
 
 ##Examples
